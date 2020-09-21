@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Baloo+2:wght@800&display=swap');
 
 
 
@@ -205,6 +206,18 @@ header{
 
 .search-wrapper {
     width: 80%;
+    display: flex;
+    align-items: center;
+    background: #F7F7F7;
+    border: 1px solid #E8E8EB;
+    color: #6e777f;
+    padding-left: 15px;
+    border-radius: 6px;
+}
+
+.search-wrapper input {
+    background: transparent;
+    border: 0;
 }
 
 ul.right {
@@ -229,6 +242,19 @@ ul.right .nav-item button {
     color: #2735f5;
 }
 
+.header-bottom .navbar-nav .nav-item .dropdown-menu {
+    background: whitesmoke;
+    border: 0;
+    border-radius: 0;
+    top: 143%;
+    padding-bottom: 15px;
+}
+
+.header-bottom .navbar-nav .nav-item .dropdown-menu .dropdown-divider {
+    display: none;
+}
+
+
 .nav-right {
     justify-content: flex-end;
 }
@@ -241,7 +267,13 @@ ul.right .nav-item button {
     padding: 0;
     background: transparent;
     border: 0;
-    color: #000;
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+}
+
+ul.right .nav-item button p {
+    font-size: 18px;
 }
 
 ul.right .nav-item {
@@ -254,6 +286,19 @@ ul.right .nav-item:last-child {
 
 ul.right .nav-item .item .ammount {
     padding-left: 15px;
+    color: #606174;
+    font-size: 15px;
+}
+.dropdown button:after, .dropdown .dropdown-toggle:after {
+    content: '\f107';font-family: FontAwesome;border: 0;}
+
+
+ul.right .nav-item button .fa-user-circle {
+    padding-right: 10px;
+}
+
+ul.right .nav-item .item p {
+    font-size: 18px;
 }
 
 .header-top .logo img {
@@ -276,6 +321,7 @@ ul.right .nav-item .item .ammount {
     text-transform: capitalize;
 }
 
+
 .header-bottom .navbar-nav .nav-item {
     padding-right: 25px;
 }
@@ -291,6 +337,37 @@ ul.right .nav-item .item .ammount {
 .header-bottom .navbar {
     background: transparent;
 }
+
+.custom-switch .custom-control-label::before {
+    content: "";
+    font-family: FontAwesome;
+    font-size: 10px;
+    text-align: right;
+    padding-right: 5px;
+    padding-top: 1px;
+    color: rgb(243, 163, 26);
+}
+
+.custom-switch .custom-control-label::after {
+    background: rgb(255, 255, 255);
+    top: calc(0.25rem + 4px);
+    left: calc(-2.25rem + 4px);
+}
+
+.custom-switch .custom-control-label::before {
+    left: -2.25rem;
+    pointer-events: all;
+    border-radius: 0.5rem;
+    background: url(style.css) rgb(51, 52, 78);
+    border-color: rgb(51, 52, 78);
+    width: 40px;
+    height: 20px;
+    border-radius: 1rem;
+}
+
+.custom-switch .custom-control-input:checked ~ .custom-control-label::after {
+    left: calc(-2.25rem + 11px);
+}
 /* End Header */
 
 /* Banner Top */
@@ -301,6 +378,7 @@ ul.right .nav-item .item .ammount {
     padding: 0;
     margin-top: 30px;
     position: relative;
+    margin-bottom: 60px;
 }
 
 .banner-top.banner .sample {
@@ -372,9 +450,26 @@ ul.right .nav-item .item .ammount {
     text-transform: uppercase;
     font-size: 12px;
 }
+.header-slider a i {
+    padding-right: 10px;
+}
 
 .slide-item .image {
     text-align: center;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.slide-item .image i {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 30px;
+    color: #ff0a69;
+    opacity: 0.6;
 }
 
 .slide-item h4 {
@@ -422,6 +517,10 @@ ul.right .nav-item .item .ammount {
     padding: 50px;
 }
 
+.banner-reward .button-custom i {
+    padding-left: 10px;
+}
+
 .banner-reward p {
     color: #57596D;
 }
@@ -438,6 +537,14 @@ ul.right .nav-item .item .ammount {
 .banner-member h5 {
     color: #8D8E9C;
     padding: 10px 0 0;
+}
+
+.banner-member .icon {
+    text-align: center;
+}
+
+.banner-member .icon i {
+    font-size: 78px;
 }
 
 .banner-member h1 {
@@ -533,10 +640,22 @@ ul.right .nav-item .item .ammount {
     border-radius: 100%;
     color: #5B5D71;
 }
+.footer-section .socials ul li a i {
+    font-size: 19px;
+}
 
 .footer-section .socials ul li a:hover {
     background: #D7F946;
     color: #32344D;
+}
+
+.footer-section .form-group.newsletter button.button-custom {
+    display: flex;
+    align-items: center;
+}
+
+.footer-section .form-group.newsletter button.button-custom i {
+    padding-left: 10px;
 }
 
 /* end footer */
@@ -625,8 +744,18 @@ ul.right .nav-item .item .ammount {
     display: flex;
 }
 
+.contact-section h1 {
+    font-family: 'Baloo 2', cursive;
+    font-size: 48px;
+}
+
 .form-right.half-width {
     padding-left: 15px;
+}
+
+
+.contact-section .button-custom i {
+    padding-left: 10px;
 }
 
 .contact-section .form-contact .form-group .form-control {
@@ -712,6 +841,15 @@ ul.right .nav-item .item .ammount {
     .header-top {
         width: 80%;
         order: 2;
+        padding-right: 15px;
+    }
+
+    ul.right .nav-item button p {
+        display: none;
+    }
+    
+    ul.right .nav-item button:after {
+        display: none;
     }
     
     .header-top .search {
@@ -845,6 +983,10 @@ ul.right .nav-item .item .ammount {
     .banner-member .text {
         text-align: center;
     }
+
+    .banner-member .button-custom i {
+        padding-left: 15px;
+    }
     
     .banner-member .flex-center {
         justify-content: center;
@@ -931,9 +1073,12 @@ ul.right .nav-item .item .ammount {
     .slider h5 {
         padding-bottom: 0;
     }
+    .slider.section {
+        padding-top: 0;
+    }
     
     .slider.section .header-slider {
-        padding-bottom: 30px;
+        padding-bottom: 5x;
     }
 
     .button-fixed a {
@@ -960,4 +1105,13 @@ ul.right .nav-item .item .ammount {
     .slider.section {
         padding: 20px 0 40px;
     }
+
+
+    .header-bottom .navbar-nav .nav-item .nav-link::after {
+        margin-left: auto ;
+    }
+    .header-bottom .navbar-nav .nav-item .dropdown-menu {
+        background: transparent;
+    }
+
 }
